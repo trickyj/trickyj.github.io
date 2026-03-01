@@ -1,11 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panoptes – See Everything. Miss Nothing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e5e7eb;
+    }
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #cbd5f5;
+    }
+    .cta {
+      margin-top: 2rem;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 0.9rem 1.6rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #020617;
+      background: #38bdf8;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #7dd3fc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #bae6fd;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: #94a3b8;
+    }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>    Hello World </h1>
+
+  <header>
+    <h1>Panoptes</h1>
+    <p>
+      See Everything. Miss Nothing. Panoptes is an open‑source vulnerability
+      management platform designed to eliminate blind spots by combining deep
+      asset inventory with intelligent CVE correlation.
+    </p>
+    <div class="cta">
+      <a href="https://github.com/Panoptes-See-Everything-Miss-Nothing" target="_blank">View on GitHub</a>
+      <a href="#architecture">Architecture</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Why Panoptes?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Inventory‑Driven</h3>
+        <p>
+          Collects precise software, version, and configuration data directly
+          from endpoints instead of relying only on network signatures.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Fewer False Negatives</h3>
+        <p>
+          Detects vulnerable software even if it is not actively listening on
+          a port or missed by traditional scanners.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Open & Transparent</h3>
+        <p>
+          Fully open‑source, allowing security teams and researchers to
+          understand, verify, and extend detection logic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <h2>Architecture</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Spectra (Sensor)</h3>
+        <p>
+          A lightweight endpoint sensor that runs on systems to collect
+          detailed inventory information such as installed software,
+          versions, patches, and OS details.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Iris (Correlation Engine)</h3>
+        <p>
+          A backend analysis engine that correlates collected inventory data
+          with vulnerability intelligence sources to identify real exposures.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Future UI & API</h3>
+        <p>
+          Planned dashboards and APIs to visualize risk, track remediation,
+          and integrate Panoptes into SOC and VM workflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Use Cases</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Blue Teams</h3>
+        <p>
+          Gain accurate visibility into vulnerabilities and validate scanner
+          findings before remediation.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Security Researchers</h3>
+        <p>
+          Study how vulnerabilities map to real‑world software inventory and
+          experiment with detection logic.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Compliance & Audit</h3>
+        <p>
+          Provide defensible evidence of vulnerability presence and
+          remediation based on factual system data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © Panoptes Project · Open Source ·
+      <a href="https://github.com/Panoptes-See-Everything-Miss-Nothing" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
 </body>
 </html>
